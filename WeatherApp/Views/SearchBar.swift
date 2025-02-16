@@ -22,6 +22,10 @@ struct SearchBar: View {
                     .foregroundColor(.black)
                     .submitLabel(.search)
                     .onSubmit(onSubmit)
+                    .accessibilityIdentifier("searchTextField")
+                    .accessibilityAction(named: "Search") {
+                        onSubmit()
+                    }
                 
                 if !text.isEmpty {
                     Button(action: {
@@ -31,6 +35,7 @@ struct SearchBar: View {
                             .foregroundColor(.gray)
                             .font(.system(size: 16))
                     }
+                    .accessibilityIdentifier("clearButton")
                 }
             }
             .padding(10)
