@@ -27,6 +27,8 @@ struct WeatherDetailView: View {
                 WeatherInfoRow(icon: "wind", title: "Rüzgar", value: weather.windSpeedString)
             }
             .padding()
+            
+            .frame(maxHeight: 180)
             .background(Color.white.opacity(0.2))
             .cornerRadius(10)
             .padding(.horizontal)

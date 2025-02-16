@@ -15,7 +15,6 @@ struct ContentView: View {
                 SearchBar(text: $searchText, onSubmit: {
                     viewModel.searchWeather(for: searchText)
                 })
-                .padding(.horizontal, 20)
                 
                 if viewModel.isLoading {
                     ProgressView()
@@ -36,6 +35,7 @@ struct ContentView: View {
                 
                 Spacer()
             }
+            .frame(maxWidth: UIScreen.main.bounds.width - 50)
             .padding(.top, 60)
         }
     }

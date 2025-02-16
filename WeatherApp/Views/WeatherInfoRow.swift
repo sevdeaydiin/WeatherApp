@@ -15,17 +15,20 @@ struct WeatherInfoRow: View {
     var body: some View {
         HStack {
             Image(systemName: icon)
-                .foregroundColor(.white)
                 .frame(width: 30)
             
             Text(title)
-                .foregroundColor(.white)
             
             Spacer()
             
             Text(value)
-                .foregroundColor(.white)
                 .bold()
         }
+        .foregroundColor(.primary)
+        .padding(.vertical, 8)
     }
+}
+
+#Preview {
+    WeatherInfoRow(icon: "sun", title: "konya", value: "13.0")
 }

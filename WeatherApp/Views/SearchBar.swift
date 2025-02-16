@@ -41,6 +41,6 @@ struct SearchBar: View {
                     .stroke(Color.white.opacity(0.3), lineWidth: 1)
             )
         }
-        .frame(maxWidth: UIScreen.main.bounds.width - 50, maxHeight: 80)
+        .frame(maxHeight: 80)
     }
 }
